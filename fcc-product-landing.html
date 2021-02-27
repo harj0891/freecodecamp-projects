@@ -1,0 +1,199 @@
+<head>
+    <style>
+
+        @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+        * {
+            padding: 0;
+            margin: 0; 
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(223, 223, 223);
+        }
+
+        header {
+            display:grid;
+            position:fixed;
+            grid-template-columns: 30% 70%;
+            grid-gap:1em;
+            width:100%;
+            min-height:50px;
+            background-color: rgb(168, 168, 168);
+            font-family: 'Lato', sans-serif;
+        }
+
+
+        main {
+            display: grid;
+            width:100%;
+            justify-items:center;
+            padding-top: 5rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        @media(max-width:840px)  {
+            main {
+                display: block;
+                padding-top: 10rem;
+                font-family: 'Lato', sans-serif;
+            }
+        }
+
+        footer {
+            display:inline-flex;
+            width:100px;
+
+        }
+
+
+
+        a {
+           color: #000;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: yellow;
+        }
+
+        ul li{
+            display: inline;
+            margin-right: 5rem;
+            color:black;
+        }
+
+        h3 {
+            background-color: rgb(192, 190, 190);
+
+        }
+
+        #header-img {
+            width:300px;
+            height:35px;
+            margin: 1rem;
+            
+        }
+
+        #nav-bar {
+            margin: 1rem;
+            display:grid;
+            justify-items:end;
+        }
+
+
+        .grid-center-items {
+            display:grid;
+            justify-items: center;
+        }
+
+
+        .product-plans {
+            margin-top:60px;
+            margin-bottom:60px;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .product {
+            display:grid;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 2.5em;
+            margin: 0.5em;
+
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <header id="header">
+        <img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="original-trombones-logo" id="header-img">
+        <nav id="nav-bar">            
+            <ul>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#video-trombone-quintet" class="nav-link">How It Works</a></li>
+                <li><a href="#product-plans" class="nav-link">Pricing</a></li>
+            </ul>            
+        </nav>
+    </header>
+    <main>
+        <section id="enquire">
+            <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+                <h1 id="title">Handcrafted, home-made masterpieces</h1>
+                <input id ="email" type="email" name="email" placeholder="Please enter your email address for offers:">
+                <input id="submit" type="submit" class="uppercase">Get Started</input>
+            </form>
+        </section>
+        <section id ="features">
+            <section>
+                <!-- <img> -->
+                <h2>Premium Materials</h2>
+                <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+            </section>
+            <section>
+                <!-- <img> -->
+                <h2>Fast Shipping</h2>
+                <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied. </p>
+            </section>
+            <section>
+                <!-- <img> -->
+                <h2>Quality Assurance</h2>
+                <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument. </p>
+            </section>
+            <section id="video-trombone-quintet" class="grid-center-items">
+                <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <section id="product-plans" class="product-plans" >
+                <section id="pricing-tenor" class="product">
+                    <h3>Tenor Trombone</h3>
+                    <p>
+                        Lorem ipsum.
+                        <br>Lorem ipsum.
+                        <br>Lorem ipsum dolor.
+                        <br>Lorem ipsum.
+                    </p>
+                    <button type="button" id="button-tenor" class="uppercase">Select</button>
+                </section>
+                <section id="pricing-bass" class="product">
+                    <h3>Bass Trombone</h3>
+                    <p>
+                        Lorem ipsum.
+                        <br>Lorem ipsum.
+                        <br>Lorem ipsum dolor.
+                        <br>Lorem ipsum.
+                    </p>
+                    <button type="button" id="button-bass" class="uppercase">Select</button>
+                </section>
+                <section id="valve-tenor" class="product">
+                    <h3>Valve Trombone</h3>
+                    <p>
+                        Lorem ipsum.
+                        <br>Lorem ipsum.
+                        <br>Lorem ipsum dolor.
+                        <br>Lorem ipsum.
+                    </p>
+                    <button type="button" id="button-value" class="uppercase">Select</button>
+                </section>
+            </section>                        
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>            
+        </nav>
+        <p id="copyright">Copyright 2021, Original Trombones</p>
+    </footer>
+</body>
