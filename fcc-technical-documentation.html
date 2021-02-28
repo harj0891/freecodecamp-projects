@@ -71,20 +71,20 @@
             margin-top:15px;
         }
 
-        header {
+        .nav-link {
+            text-decoration: none;
+        }
+
+        section header {
             margin-top:20px;
             margin-left:15px;
-            font-weight: normal;
+            font-weight: bold;
         }
 
         p {
             margin-top:15px;
             margin-left:30px;
          
-        }
-
-        a {
-            text-decoration: none;
         }
 
         code {
@@ -123,23 +123,23 @@
     </style>
 </head>
 <body class ="wrapper-grid">
-    <nav id="nav-section" class="nav-section">
-        <h1 id="title" class="title">JS Documentation</h1>
+    <nav id="navbar" class="nav-section">
+        <header><h1 id="title" class="title">JS Documentation</h1></header>
         <ul id="nav-list" class="nested-grid">
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#already-know">What you should already know</a></li>
-            <li><a href="#javascript-and-java">JavaScript and Java</a></li>
-            <li><a href="#hello-world">Hello world</a></li>
-            <li><a href="#variables">Variables</a></li>
-            <li><a href="#variables-declare">Declaring variables</a></li>
-            <li><a href="#variables-scope">Variable scope</a></li>
-            <li><a href="#variables-global">Global variables</a></li>
-            <li><a href="#contants">Constants</a></li>
-            <li><a href="#data-types">Data types</a></li>
-            <li><a href="#if-else">if...else statement</a></li>
-            <li><a href="#while">while statement</a></li>
-            <li><a href="#function">Function declarations</a></li>
-            <li><a href="#reference">Reference</a></li>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+            <li><a class="nav-link" href="#javascript_and_java">JavaScript and Java</a></li>
+            <li><a class="nav-link" href="#hello_world">Hello world</a></li>
+            <li><a class="nav-link" href="#variables">Variables</a></li>
+            <li><a class="nav-link" href="#declaring_variables">Declaring variables</a></li>
+            <li><a class="nav-link" href="#variable_scope">Variable scope</a></li>
+            <li><a class="nav-link" href="#global_variables">Global variables</a></li>
+            <li><a class="nav-link" href="#constants">Constants</a></li>
+            <li><a class="nav-link" href="#data_types">Data types</a></li>
+            <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+            <li><a class="nav-link" href="#while_statement">while statement</a></li>
+            <li><a class="nav-link" href="#function_declarations">Function declarations</a></li>
+            <li><a class="nav-link" href="#reference">Reference</a></li>
         </ul>
     </nav>
     <main id="main-doc" class="main-doc">
@@ -155,16 +155,16 @@
                     <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
                 </ul>    
             </section>
-            <section id="already-know" class="main-section">
+            <section id="What_you_should_already_know" class="main-section">
                 <header>What you should already know</header>
-                <p>This guide assumes you have the following basic background:
-
-                    A general understanding of the Internet and the World Wide Web (WWW).
-                    Good working knowledge of HyperText Markup Language (HTML).
-                    Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.
-                </p>
+                <p>This guide assumes you have the following basic background:<p>
+                <ul>
+                    <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                    <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                    <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>                    
+                </ul>
             </section>
-            <section id="javascript-and-java" class="main-section">
+            <section id="javascript_and_java" class="main-section">
                 <header>JavaScript and Java</header>
                 <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.
 
@@ -173,7 +173,7 @@
                     JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.
                 </p>
             </section>
-            <section id="hello-world" class="main-section">
+            <section id="hello_world" class="main-section">
                 <header>Hello world</header>
                 <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
                     <code>function greetMe(yourName) { alert("Hello " + yourName); }
@@ -193,7 +193,7 @@
 
                 </p>
             </section>
-            <section id="variables-declare" class="main-section">
+            <section id="declaring_variables" class="main-section">
                 <header>Declaring variables</header>
                 <p>You can declare a variable in three ways:
                     With the keyword var. For example,
@@ -210,7 +210,7 @@
 
                 </p>
             </section>
-            <section id="variables-scope" class="main-section">
+            <section id="variable_scope" class="main-section">
                 <header>Variable scope</header>
                 <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.
 
@@ -224,7 +224,7 @@
 
                 </p>
             </section>
-            <section id="variables-global" class="main-section">
+            <section id="global_variables" class="main-section">
                 <header>Global variables</header>
                 <p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.
 
@@ -232,7 +232,7 @@
 
                 </p>
             </section>
-            <section id="contants" class="main-section">
+            <section id="constants" class="main-section">
                 <header>Constants</header>
                 <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.
 
@@ -252,16 +252,28 @@
                     
                 </p>
             </section>
-            <section id="data-types" class="main-section">
+            <section id="data_types" class="main-section">
                 <header>Data types</header>
+                <p>The latest ECMAScript standard defines seven data types:</p>
+                <ul>
+                    <li>Six data types that are primitives:</li>
+                        <li>Boolean. true and false.</li>
+                        <li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+                        <li>undefined. A top-level property whose value is undefined.</li>
+                        <li>Number. 42 or 3.14159.</li>
+                        <li>String. "Howdy"</li>
+                        <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+                    <li>and Object</li>
+                </ul>
+                <p>Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform. </p>
             </section>
-            <section id="if-else" class="main-section">
+            <section id="if...else_statement" class="main-section">
                 <header>if...else statement</header>
             </section>
-            <section id="while" class="main-section">
+            <section id="while_statement" class="main-section">
                 <header>while statement</header>
             </section>
-            <section id="function" class="main-section">
+            <section id="function_declarations" class="main-section">
                 <header>Function declarations</header>
             </section>
             <section id="reference" class="main-section">
